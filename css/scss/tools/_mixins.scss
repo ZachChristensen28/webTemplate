@@ -1,0 +1,36 @@
+// == Breakpoints ==
+@mixin tiny-only {
+   @media only screen and (max-width: $tiny-max-width){
+    @content;
+  }
+}
+@mixin mobile {
+   @media only screen and (max-width: $mobile-max-width){
+    @content;
+  }
+}
+@mixin tablet {
+   @media only screen and (max-width: $tablet-max-width){
+    @content;
+  }
+}
+@mixin tablet-only {
+   @media only screen and (max-width: $tablet-max-width) and (min-width: $mobile-max-width + 1){
+    @content;
+  }
+}
+@mixin above-tablet {
+   @media only screen and (max-width: $desktop-min-width - 1){
+    @content;
+  }
+}
+@mixin desktop {
+   @media only screen and (min-width: $desktop-min-width){
+    @content;
+  }
+}
+@mixin desktop-xl {
+   @media only screen and (min-width: $desktop-xl-min-width){
+    @content;
+  }
+}

@@ -1,0 +1,19 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+#For GoDaddy
+#Options +MultiViews
+DirectoryIndex index.html
+ErrorDocument 403 #error page goes here
+ErrorDocument 404 #error page goes here
+# 400 Bad Request
+# 401 Authorization Required
+# 403 Forbidden Page
+# 404 File not Found
+# 500 Internal Error
+order deny,allow
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([\.]+)$ $1.html [NC,L]
