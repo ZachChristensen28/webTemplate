@@ -1,0 +1,13 @@
+# Editor Config
+
+# top-most EditorConfig file
+root = true;
+
+# Set default charset
+[*.{js,html,css,scss}]
+charset = utf-8
+
+# Html Indent
+[*.{html,scss}]
+indent_size = 2
+#indent_style = space or tab
