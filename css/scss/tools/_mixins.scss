@@ -12,79 +12,28 @@
   src: url('/fonts/Cinzel-Bold.ttf');
   font-weight: bold;
 }
-/* Cormorant */
-@font-face {
-  font-family: Cormorant;
-  src: url('/fonts/CormorantGaramond-Light.ttf');
-  font-weight: lighter;
-}
-@font-face {
-  font-family: Cormorant;
-  src: url('/fonts/CormorantGaramond-Regular.ttf');
-}
-@font-face {
-  font-family: Cormorant;
-  src: url('/fonts/CormorantGaramond-Bold.ttf');
-  font-weight: bold;
-}
-@font-face {
-  font-family: Cormorant;
-  src: url('/fonts/CormorantGaramond-Italic.ttf');
-  font-style: italic;
-}
-/* Raleway */
-@font-face {
-  font-family: Raleway;
-  src: url('/fonts/Raleway-Light.ttf');
-  font-weight: lighter;
-}
-@font-face {
-  font-family: Raleway;
-  src: url('/fonts/Raleway-Regular.ttf');
-}
-@font-face {
-  font-family: Raleway;
-  src: url('/fonts/Raleway-Italic.ttf');
-  font-style: italic;
-}
-@font-face {
-  font-family: Raleway;
-  src: url('/fonts/Raleway-Bold.ttf');
-  font-weight: bold;
-}
-// == Breakpoints ==
-@mixin tiny-only {
-  @media only screen and (max-width: $tiny-max-width) {
-    @content;
-  }
-}
+
+/* Media Queries */
 @mixin mobile {
   @media only screen and (max-width: $mobile-max-width) {
     @content;
   }
 }
-@mixin tablet {
+
+@mixin above-tablet {
   @media only screen and (min-width: $mobile-max-width + 1) {
-    @content;
+    @content
   }
 }
-@mixin tablet-only {
-  @media only screen and (max-width: $tablet-max-width) and (min-width: $mobile-max-width + 1) {
-    @content;
-  }
-}
-@mixin below-tablet {
-  @media only screen and (max-width: $desktop-min-width - 1) {
-    @content;
-  }
-}
+
 @mixin desktop {
   @media only screen and (min-width: $desktop-min-width) {
     @content;
   }
 }
+
 @mixin desktop-xl {
-  @media only screen and (min-width: $desktop-xl-min-width) {
+  @media only screen and (min-width: $desktop-xl) {
     @content;
   }
 }

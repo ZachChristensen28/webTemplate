@@ -1,11 +1,10 @@
-$img-path: '../../img'; //$heading-font:;
-//$base-font:;
-$font-size: 18px;
-$font-color: #fff;
-$black: #000;
-$white: #fff;
-$tiny-max-width: 360px;
-$mobile-max-width: 480px;
-$tablet-max-width: 767px;
+$base-font: 'RobotoCondensed';
+$footer-font: 'Roboto';
+$fira-font: 'FiraSans';
+$base-font-size: 16px;
+$suu-red: #ce181f;
+$border-color: #B6B6B6;
+$mobile-max-width: 767px; //$tablet-max-width
 $desktop-min-width: 980px;
-$desktop-xl-min-width: 1300px;
+$desktop-xl: 1200px;
+$white: #fff;
